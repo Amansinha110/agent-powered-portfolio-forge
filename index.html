@@ -1,30 +1,610 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Creative UX/UI Designer & Developer</title>
-    <meta name="description" content="Modern portfolio showcasing creative UX/UI design and development projects with AI-powered assistance." />
-    <meta name="author" content="Portfolio" />
-
-    <meta property="og:title" content="Portfolio - Creative UX/UI Designer & Developer" />
-    <meta property="og:description" content="Modern portfolio showcasing creative UX/UI design and development projects with AI-powered assistance." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta name="description" content="Modern portfolio showcasing creative UX/UI design and development projects with AI-powered assistance.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  </head>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">Portfolio</div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-links desktop-nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon hidden"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav hidden" id="mobileNav">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-decoration hero-decoration-1"></div>
+            <div class="hero-decoration hero-decoration-2"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">
+                <span class="hero-title-white">CREATIVE</span>
+                <br>
+                <span class="hero-title-yellow">PORTFOLIO</span>
+            </h1>
+            
+            <p class="hero-subtitle fade-in delay-200">
+                UX/UI DESIGNER & DEVELOPER
+            </p>
+            
+            <p class="hero-description fade-in delay-400">
+                Crafting digital experiences that blend creativity with functionality. 
+                Specializing in modern web development and user-centered design.
+            </p>
+
+            <!-- Social Links -->
+            <div class="social-links fade-in delay-600">
+                <a href="#" class="social-link">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i data-lucide="mail"></i>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="#projects" class="cta-button fade-in delay-800">
+                View My Work
+                <i data-lucide="arrow-down"></i>
+            </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-indicator-inner">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    About <span class="text-yellow">Me</span>
+                </h2>
+                <p class="section-description">
+                    Passionate designer and developer with a keen eye for detail and user experience.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-subtitle">My Story</h3>
+                    <p class="about-paragraph">
+                        I'm a creative professional who bridges the gap between design and development. 
+                        With a background in both UX/UI design and front-end development, I create 
+                        digital experiences that are not only visually stunning but also highly functional.
+                    </p>
+                    <p class="about-paragraph">
+                        My approach combines user-centered design principles with cutting-edge technology 
+                        to deliver solutions that exceed expectations. I believe in the power of clean code, 
+                        intuitive interfaces, and meaningful interactions.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i data-lucide="award" class="stat-icon"></i>
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <i data-lucide="coffee" class="stat-icon"></i>
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <i data-lucide="user" class="stat-icon"></i>
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <i data-lucide="zap" class="stat-icon"></i>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Passion</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-facts">
+                    <div class="facts-card">
+                        <h4 class="facts-title">Quick Facts</h4>
+                        <ul class="facts-list">
+                            <li>🎨 Specialized in modern UI/UX design</li>
+                            <li>⚡ Expert in React, TypeScript, and Tailwind</li>
+                            <li>🚀 Performance optimization enthusiast</li>
+                            <li>🌟 Always learning new technologies</li>
+                            <li>☕ Fueled by coffee and creativity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    My <span class="text-yellow">Skills</span>
+                </h2>
+                <p class="section-description">
+                    A comprehensive toolkit for creating exceptional digital experiences.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i data-lucide="code" class="skill-icon"></i>
+                    <h3 class="skill-title">Frontend Development</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-label">
+                            <span>Proficiency</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i data-lucide="palette" class="skill-icon"></i>
+                    <h3 class="skill-title">UI/UX Design</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-label">
+                            <span>Proficiency</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe XD</span>
+                        <span class="skill-tag">Sketch</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">User Research</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i data-lucide="smartphone" class="skill-icon"></i>
+                    <h3 class="skill-title">Mobile Development</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-label">
+                            <span>Proficiency</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">iOS</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">PWA</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i data-lucide="database" class="skill-icon"></i>
+                    <h3 class="skill-title">Backend & Database</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-label">
+                            <span>Proficiency</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i data-lucide="globe" class="skill-icon"></i>
+                    <h3 class="skill-title">Web Technologies</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-label">
+                            <span>Proficiency</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">SASS</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Webpack</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i data-lucide="zap" class="skill-icon"></i>
+                    <h3 class="skill-title">Tools & Others</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-label">
+                            <span>Proficiency</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="skill-progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Testing</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Featured <span class="text-yellow">Projects</span>
+                </h2>
+                <p class="section-description">
+                    A selection of my recent work showcasing different technologies and design approaches.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80" alt="E-Commerce Platform">
+                            <div class="project-overlay"></div>
+                        </div>
+                        
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">E-Commerce Platform</h3>
+                                <span class="featured-badge">Featured</span>
+                            </div>
+                            
+                            <p class="project-description">
+                                Modern e-commerce solution with advanced filtering, payment integration, and admin dashboard.
+                            </p>
+                            
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i data-lucide="github"></i>
+                                    <span>Code</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i data-lucide="external-link"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80" alt="Task Management App">
+                        <div class="project-overlay"></div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <h3 class="project-title">Task Management App</h3>
+                        
+                        <p class="project-description">
+                            Collaborative project management tool with real-time updates and team features.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i data-lucide="external-link"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="AI-Powered Analytics">
+                            <div class="project-overlay"></div>
+                        </div>
+                        
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">AI-Powered Analytics</h3>
+                                <span class="featured-badge">Featured</span>
+                            </div>
+                            
+                            <p class="project-description">
+                                Business intelligence dashboard with machine learning insights and data visualization.
+                            </p>
+                            
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">D3.js</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i data-lucide="github"></i>
+                                    <span>Code</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i data-lucide="external-link"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=800&q=80" alt="Social Media App">
+                        <div class="project-overlay"></div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <h3 class="project-title">Social Media App</h3>
+                        
+                        <p class="project-description">
+                            Mobile-first social platform with real-time chat and content sharing capabilities.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i data-lucide="github"></i>
+                                <span>Code</span>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i data-lucide="external-link"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-cta">
+                <a href="#" class="view-all-btn">
+                    <i data-lucide="eye"></i>
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Get In <span class="text-yellow">Touch</span>
+                </h2>
+                <p class="section-description">
+                    Have a project in mind? Let's collaborate and create something amazing together.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Let's Connect</h3>
+                    <p class="contact-description">
+                        I'm always interested in hearing about new projects and opportunities. 
+                        Whether you're a company looking to hire, or you're a fellow designer/developer 
+                        looking to collaborate, I'd love to hear from you.
+                    </p>
+
+                    <div class="contact-items">
+                        <a href="mailto:hello@portfolio.com" class="contact-item">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">hello@portfolio.com</div>
+                            </div>
+                        </a>
+                        <a href="tel:+15551234567" class="contact-item">
+                            <i data-lucide="phone" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <div class="contact-label">Phone</div>
+                                <div class="contact-value">+1 (555) 123-4567</div>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                            <div class="contact-details">
+                                <div class="contact-label">Location</div>
+                                <div class="contact-value">San Francisco, CA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-input" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" placeholder="your.email@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" class="form-input" placeholder="Project discussion" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            <i data-lucide="send"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <button class="ai-toggle" id="aiToggle">
+            <i data-lucide="message-circle" class="ai-toggle-icon"></i>
+            <i data-lucide="x" class="ai-toggle-close hidden"></i>
+        </button>
+
+        <div class="ai-chat hidden" id="aiChat">
+            <div class="ai-header">
+                <div class="ai-avatar">
+                    <i data-lucide="bot"></i>
+                </div>
+                <div class="ai-info">
+                    <h3 class="ai-title">AI Assistant</h3>
+                    <p class="ai-subtitle">Ask me anything about this portfolio</p>
+                </div>
+            </div>
+
+            <div class="ai-messages" id="aiMessages">
+                <div class="ai-message ai-message-bot">
+                    <i data-lucide="bot" class="message-icon"></i>
+                    <p class="message-text">
+                        Hi! I'm your AI assistant. I can help you learn more about this portfolio, 
+                        the projects, skills, or answer any questions you might have. How can I help you today?
+                    </p>
+                </div>
+            </div>
+
+            <div class="ai-quick-questions" id="aiQuickQuestions">
+                <p class="quick-questions-label">Quick questions:</p>
+                <div class="quick-questions-grid">
+                    <button class="quick-question" data-question="Tell me about the projects">Tell me about the projects</button>
+                    <button class="quick-question" data-question="What technologies are used?">What technologies are used?</button>
+                    <button class="quick-question" data-question="How can I contact the owner?">How can I contact the owner?</button>
+                    <button class="quick-question" data-question="What's the experience level?">What's the experience level?</button>
+                </div>
+            </div>
+
+            <form class="ai-input-form" id="aiInputForm">
+                <input type="text" class="ai-input" id="aiInput" placeholder="Ask me anything...">
+                <button type="submit" class="ai-send">
+                    <i data-lucide="send"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
 </html>
